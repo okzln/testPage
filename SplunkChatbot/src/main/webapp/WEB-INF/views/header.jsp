@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>ChatBot</title>
 <link rel="stylesheet" href="resources/css/main.css">
-<script></script>
+<script type="text/javascript" defer src="resources/js/main.js"></script>
 </head>
 <body>
 	<nav>

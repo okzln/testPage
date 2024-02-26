@@ -9,8 +9,11 @@
 				<div class="subtitle"><span>ITU, ITM, Splunk 파일에 대해서 질문을 받고 있습니다.</span></div>
 			</div>
 			<div class="main section">
-				<div>
-					<img class="firstMessage" alt="Hello" src="/resources/image/firstHello.png">
+				<div class="helloBox">
+					<div class="icon"></div>
+					<div class="message mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm">
+						<span>Hello! 👋</span>
+					</div>
 				</div>
 			</div>
 			<div class="main footer">
