@@ -5,7 +5,7 @@
 <head>
 <meta charset="UTF-8">
 <title>ChatBot</title>
-<link rel="stylesheet" href="resources/css/stylesheet.css">
+<link rel="stylesheet" href="resources/css/main.css">
 <script></script>
 </head>
 <body>
