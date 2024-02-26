@@ -1,3 +1,90 @@
 @charset "UTF-8";
 @import "reset.css";
 
+body {
+	--tw-bg-opacity: 1;
+	background: rgb(248 250 252 / var(--tw-bg-opacity));
+}
+
+nav {
+	display: flex;
+	justify-content: center;	
+	padding: 1.5rem;
+}
+
+.navigator {
+	display: flex;	
+	width: 90%;
+	justify-content: flex-end;
+	z-index: 10;
+	line-height: 40px;
+	position: sticky;
+	top: 0;
+}
+
+.chatBtn, .infoBtn {
+	border-radius: 5px;
+	background: #fff;
+	padding: 2px 20px;
+	margin-right: 10px;
+}
+
+.container {
+	display: flex;
+	justify-content: center;
+}
+
+.main {
+	padding: 1.5rem;
+}
+
+.wrapper {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+    flex-direction: column;
+    background: #fff;
+    border: 1px solid hsl(var(--border)); 
+    border-radius: 5px;
+}
+
+.title span{
+	font-size: 1.5rem;
+	font-weight: 600;
+}
+
+.subtitle span{
+	color:  hsl(var(--muted-foreground));
+}
+
+.section {
+	height: 70vh;
+}
+
+.firstMessage {
+	
+}
+
+
+.footer {
+	line-height: 40px;
+	text-align: center;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footer .questionBox {
+	outline: none;
+	width: 80%;
+	border: 1px solid hsl(var(--border)); 
+	border-radius: 5px;
+	padding: 0 10px;
+	margin-right: 
+}
+
+.footer .sendBtn {
+	color: #fff;
+	background: #000;
+	border-radius: 5px;
+	padding: 2px 20px;
+}
