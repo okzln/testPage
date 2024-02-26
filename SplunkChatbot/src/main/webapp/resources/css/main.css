@@ -6,6 +6,21 @@ body {
 	background: rgb(248 250 252 / var(--tw-bg-opacity));
 }
 
+.section::-webkit-scrollbar, .body::-webkit-scrollbar {
+   width: 10px;
+ }
+ .section::-webkit-scrollbar-thumb, .body::-webkit-scrollbar-thumb {
+   background-color: rgb(59 130 246 / 0.5);
+   border-radius: 10px;
+   background-clip: padding-box;
+   border: 2px solid transparent;
+ }
+ .section::-webkit-scrollbar-track, .body::-webkit-scrollbar-track {
+   background-color: none;
+   border-radius: 10px;
+   box-shadow: inset 0px 0px 5px white;
+ }
+
 nav {
 	display: flex;
 	justify-content: center;	
@@ -59,12 +74,38 @@ nav {
 
 .section {
 	height: 70vh;
+	max-height: 65vh;
+    overflow: auto;
 }
 
-.firstMessage {
-	
+.helloBox {
+	display: flex;
+	align-items: center;
 }
 
+.icon {
+	background-image: url('../image/bot.png');
+	width: 20px;
+	height: 20px;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin-right: 10px;
+}
+
+.message {
+	width: max-content;
+}
+
+.chatQuestion {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.chatAnswer {
+	display: flex;
+	justify-content: flex-start;
+	font-size: 15px;
+}
 
 .footer {
 	line-height: 40px;
@@ -87,4 +128,5 @@ nav {
 	background: #000;
 	border-radius: 5px;
 	padding: 2px 20px;
+	cursor: pointer;
 }
