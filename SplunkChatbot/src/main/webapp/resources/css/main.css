@@ -4,6 +4,7 @@
 body {
 	--tw-bg-opacity: 1;
 	background: rgb(248 250 252 / var(--tw-bg-opacity));
+	height: 100vh;
 }
 
 .section::-webkit-scrollbar, .body::-webkit-scrollbar {
@@ -100,12 +101,21 @@ nav {
 .chatQuestion {
 	display: flex;
 	justify-content: flex-end;
+	font-size: 0.9rem;
 }
 
 .chatAnswer {
 	display: flex;
 	justify-content: flex-start;
 	font-size: 15px;
+}
+
+ul li {
+	list-style: none;
+}
+
+.explanation li {
+	list-style: disc;
 }
 
 .footer {
