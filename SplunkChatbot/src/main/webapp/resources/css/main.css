@@ -80,7 +80,7 @@ nav {
 
 .helloBox {
 	display: flex;
-	align-items: center;
+	align-items: end;
 }
 
 .icon {
@@ -90,6 +90,7 @@ nav {
 	background-size: cover;
 	background-repeat: no-repeat;
 	margin-right: 10px;
+	margin-bottom: 1rem;
 }
 
 .message {

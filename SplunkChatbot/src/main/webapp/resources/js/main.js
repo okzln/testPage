@@ -7,10 +7,11 @@ const createQuestion = () => {
 	const firstQuestion = document.getElementById('firstQuestion');
 	if(question.value == "접속 이상 징후 탐지 결과 알려줘"){
 		if(firstQuestion){
-			let chatAnswers = document.querySelectorAll('.chatAnswer');
+			let chatAnswers = document.querySelectorAll('.helloBox');
 			let lastIndex = chatAnswers.length -1;
 			chatAnswers[lastIndex].insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
+			createAnswer1()
 		}else{
 			botMessage.insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
@@ -18,21 +19,26 @@ const createQuestion = () => {
 		}
 	}else if(question.value == "DB에서 개인 정보 조회 사용자 탐지 결과 알려줘"){
 		if(firstQuestion){
-			let chatAnswers = document.querySelectorAll('.chatAnswer');
+			console.log(`있음`)
+			let chatAnswers = document.querySelectorAll('.helloBox');
 			let lastIndex = chatAnswers.length -1;
+			console.log(chatAnswers[lastIndex])
 			chatAnswers[lastIndex].insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
+			createAnswer2();
 		}else{
+			console.log(`없음`)
 			botMessage.insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
 			createAnswer2();
 		}
 	}else if(question.value == "계정관리 위반 탐지"){
 		if(firstQuestion){
-			let chatAnswers = document.querySelectorAll('.chatAnswer');
+			let chatAnswers = document.querySelectorAll('.helloBox');
 			let lastIndex = chatAnswers.length -1;
 			chatAnswers[lastIndex].insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
+			createAnswer3();
 		}else{
 			botMessage.insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
@@ -44,6 +50,7 @@ const createQuestion = () => {
 			let lastIndex = chatAnswers.length -1;
 			chatAnswers[lastIndex].insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
+			createAnswer4();
 		}else{
 			botMessage.insertAdjacentHTML('afterend', firstQ);
 			question.value = "";
@@ -53,19 +60,19 @@ const createQuestion = () => {
 }
 
 const createAnswer1 = () => {
-	const firstA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과 URL:</b><br>'+
-		'https://es-demo-apac.splunk.show/en-US/app/SplunkEnterpriseSecuritySuite/search</span></div>';
-	const secondA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
-		'<img src=\'resources/image/result1.png\'></span></div>';
+	const firstA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과 URL:</b><br>'+
+		'<a href=\'https://bit.ly/3Igxohr\' target=\'_blank\'>https://bit.ly/3Igxohr</a></span></div></div>';
+	const secondA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
+		'<img src=\'resources/image/result1.png\'></span></div></div>';
 	const firstQ = document.getElementById('firstQuestion');
-	firstQ.insertAdjacentHTML('afterend', '<div class=\'helloBox\'><div class=\'icon\'>'+firstA+secondA+'</div></div>');
+	firstQ.insertAdjacentHTML('afterend', firstA+secondA);
 }
 
 const createAnswer2 = () => {
-	const firstA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과 URL:</b><br>'+
-		'https://es-demo-apac.splunk.show/en-US/app/SplunkEnterpriseSecuritySuite/search</span></div>';
-	const secondA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
-		'<img src=\'resources/image/result2.png\'></span></div>';
+	const firstA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과 URL:</b><br>'+
+		'<a href=\'https://bit.ly/49wWGUB\' target=\'_blank\'>https://bit.ly/49wWGUB</a></span></div></div>';
+	const secondA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
+		'<img src=\'resources/image/result2.png\'></span></div></div>';
 	const firstQ = document.getElementById('firstQuestion');
 	firstQ.insertAdjacentHTML('afterend', firstA+secondA);
 }
@@ -73,17 +80,17 @@ const createAnswer2 = () => {
 const createAnswer3 = () => {
 	const firstA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과 URL:</b><br>'+
 		'https://es-demo-apac.splunk.show/en-US/app/SplunkEnterpriseSecuritySuite/search</span></div>';
-	const secondA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
-		'<img src=\'resources/image/result3.png\'></span></div>';
+	const secondA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-2xl rounded-t-2xl leading-relaxed prose prose-sm\'><b>결과화면:</b><br>'+
+		'<img src=\'resources/image/result3.png\'></span></div></div>';
 	const firstQ = document.getElementById('firstQuestion');
 	firstQ.insertAdjacentHTML('afterend', firstA+secondA);
 }
 
 const createAnswer4 = () => {
-	const firstA = '<div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-xl rounded-t-xl leading-relaxed prose prose-sm\'><b>관리자 로그인:</b><br>'+
+	const firstA = '<div class=\'helloBox\'><div class="icon"></div><div class=\'chatAnswer\'><span class=\'mb-4 bg-zinc-100 p-3 rounded-r-xl rounded-t-xl leading-relaxed prose prose-sm\'><b>관리자 로그인:</b><br>'+
 		'\`index=audit action=login status=success user=\"admin\"\`<br>'+
 		'<b>관리자 로그아웃:</b><br>\`index=audit action=logout status=success user=\"admin\"\`<br><b>관리자 추가:</b><br>'+
-		'\`index=_internal sourcetype=splunkd_ui_access method=POST uri_path=\*/services/authentication/users\*\`';
+		'\`index=_internal sourcetype=splunkd_ui_access method=POST uri_path=\*/services/authentication/users\*\`</span></div></div>';
 	const firstQ = document.getElementById('firstQuestion');
 	firstQ.insertAdjacentHTML('afterend', firstA);
 }
